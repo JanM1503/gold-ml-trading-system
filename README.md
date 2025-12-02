@@ -1,4 +1,4 @@
-# 🪙 Gold Trading Framework
+# 🥇 Gold Trading Framework
 
 Ein vollwertiges Python-Framework für algorithmisches Gold-Trading mit Machine Learning, Backtesting und Live-Demo-Trading über Oanda.
 
@@ -354,3 +354,4 @@ Bei Fragen oder Problemen:
 ---
 
 **Viel Erfolg beim Trading! 🚀📈**
+
