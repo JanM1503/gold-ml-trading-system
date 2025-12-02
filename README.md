@@ -304,8 +304,7 @@ In `feature_engineering.py`:
 - **Oanda API**: Rate Limits beachten (max 120 Requests/Minute)
 
 ### Datenqualität
-- **Oanda Historical Data**: Begrenzte History (typisch 3-5 Jahre)
-- **Makrodaten**: Placeholder - echte Daten benötigen zusätzliche APIs
+- **Oanda Historical Data**: Begrenzte History 
 - **Sentiment**: NewsAPI Free Tier = letzte 30 Tage
 
 ## 🛠️ Troubleshooting
@@ -354,5 +353,6 @@ Bei Fragen oder Problemen:
 ---
 
 **Viel Erfolg beim Trading! 🚀📈**
+
 
 
