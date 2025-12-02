@@ -16,7 +16,7 @@ Ein vollwertiges Python-Framework für algorithmisches Gold-Trading mit Machine 
 
 ```
 gold_trading_framework/
-├── config.py                  # Zentrale Konfiguration
+├── config.py                 # Zentrale Konfiguration
 ├── data_loader.py            # Inkrementelles Daten-Management
 ├── oanda_client.py           # Oanda API Client
 ├── feature_engineering.py    # Feature-Berechnung
@@ -354,4 +354,5 @@ Bei Fragen oder Problemen:
 ---
 
 **Viel Erfolg beim Trading! 🚀📈**
+
 
