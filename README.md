@@ -82,7 +82,7 @@ python run.py --mode full
 ```
 
 Das führt automatisch durch:
-1. ✅ Daten laden
+1. ✅ Daten laden (inkrementell)
 2. ✅ Features erstellen
 3. ✅ Models trainieren
 4. ✅ Backtest durchführen
@@ -304,7 +304,8 @@ In `feature_engineering.py`:
 - **Oanda API**: Rate Limits beachten (max 120 Requests/Minute)
 
 ### Datenqualität
-- **Oanda Historical Data**: Begrenzte History 
+- **Oanda Historical Data**: Begrenzte History (typisch 3-5 Jahre)
+- **Makrodaten**: Placeholder - echte Daten benötigen zusätzliche APIs
 - **Sentiment**: NewsAPI Free Tier = letzte 30 Tage
 
 ## 🛠️ Troubleshooting
@@ -353,7 +354,5 @@ Bei Fragen oder Problemen:
 ---
 
 **Viel Erfolg beim Trading! 🚀📈**
-
-
 
 
