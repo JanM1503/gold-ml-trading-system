@@ -131,7 +131,7 @@ SPREAD_PER_OUNCE = 0.30  # $0.30 per ounce constant spread
 # 0.1 oz -> $0.03, 1.0 oz -> $0.30, 5.0 oz -> $1.50
 
 # ATR-Based Slippage Model
-ATR_SLIPPAGE_MULT = 0.02  # Slippage = ATR * 0.02
+ATR_SLIPPAGE_MULT = 0.008  # Slippage = ATR * 0.02
 # ATR=5 -> slippage=0.10, ATR=10 -> slippage=0.20, ATR=15 -> slippage=0.30
 
 # ====================================
@@ -171,3 +171,4 @@ print(f"[TRAIN] Train: {TRAIN_START_DATE} bis {TRAIN_END_DATE}")
 print(f"[TEST] Test: {TEST_START_DATE} bis {TEST_END_DATE}")
 print(f"[GOLD] Gold-Instrument: {GOLD_INSTRUMENT}")
 print(f"[TRADE] Auto-Trading: {'AKTIV' if AUTO_TRADE else 'INAKTIV'}")
+
