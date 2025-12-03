@@ -34,13 +34,22 @@ gold_trading_framework/
 
 ## 🚀 Setup
 
-### 1. Abhängigkeiten installieren
+### 1. Repository klonen
+
+```bash path=null start=null
+git clone <your-fork-or-repo-url>
+cd gold-random-forest-index-main
+```
+> Wenn das Projekt als ZIP von GitHub geladen wurde: Archiv entpacken und mit
+> `cd` in den Projektordner wechseln.
+
+### 2. Abhängigkeiten installieren
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. API-Keys konfigurieren
+### 3. API-Keys konfigurieren
 
 Setze folgende Environment-Variablen:
 
@@ -60,14 +69,14 @@ $env:OANDA_ACCOUNT_ID="dein_oanda_account_id"
 $env:NEWS_API_KEY="dein_newsapi_key"
 ```
 
-### 3. Oanda API-Keys erhalten
+### 4. Oanda API-Keys erhalten
 
 1. Registriere dich bei [Oanda fxTrade Practice](https://www.oanda.com/forex-trading/account-types/demo-account/)
 2. Gehe zu "Manage API Access"
 3. Erstelle einen neuen API Token (für Practice Account)
 4. Kopiere API Key und Account ID
 
-### 4. NewsAPI Key erhalten (optional)
+### 5. NewsAPI Key erhalten (optional)
 
 1. Registriere dich bei [NewsAPI.org](https://newsapi.org)
 2. Free-Tier ist ausreichend (100 Requests/Tag)
@@ -354,5 +363,6 @@ Bei Fragen oder Problemen:
 ---
 
 **Viel Erfolg beim Trading! 🚀📈**
+
 
 
