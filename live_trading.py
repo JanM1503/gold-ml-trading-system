@@ -261,7 +261,7 @@ class LiveTrader:
             
             self.trade_log.append(trade_log_entry)
             self._save_trade_log()
-            print(f"\n✅ Trade executed - Order ID: {order_result.get('id', 'N/A')}")
+            print(f"\n✅ {direction} Trade executed")
         
         print("="*70)
     
