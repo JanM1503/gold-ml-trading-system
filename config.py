@@ -84,6 +84,8 @@ RF_RANDOM_STATE = 42
 FUTURE_RETURN_PERIODS = [4, 8, 16]  # 1h, 2h, 4h ahead
 ENTRY_THRESHOLD_PCT = 0.2  # 0.15% for 15-min gold candles (was 0.7% - too high!)
 
+# Mindest-Wahrscheinlichkeit für LONG/SHORT Trades (sonst FLAT)
+MIN_TRADE_PROBA = 0.6  # z.B. 60%: darunter -> kein Trade
 
 # Model-Dateien
 ENTRY_MODEL_FILE = f"{MODELS_DIR}/entry_model.pkl"
@@ -97,7 +99,7 @@ FEATURE_COLUMNS_FILE = f"{MODELS_DIR}/feature_columns.json"
 # ====================================
 # Kapitalgebundenes Risk Management OHNE Hebel
 # FIXED: Reduced from 1.0% to 0.5% for realistic, sustainable returns
-RISK_PER_TRADE_PCT = 0.5  # 0.5% des Kapitals pro Trade riskieren (realistic for gold trading)
+RISK_PER_TRADE_PCT = 0.8  # 0.5% des Kapitals pro Trade riskieren (realistic for gold trading)
 MAX_LEVERAGE = 1.0  # KEIN Hebel - nur mit eigenem Kapital handeln
 MAX_POSITION_PCT = 0.15  # NEW: Maximum 15% of capital per trade (prevents exponential growth)
 MIN_CAPITAL_FOR_TRADING = 1000  # Minimum Kapital um zu traden
@@ -108,12 +110,12 @@ MIN_CAPITAL_FOR_TRADING = 1000  # Minimum Kapital um zu traden
 # - Bei 2% Stop = 50 CHF SL-Distanz
 # - Max Position Size = 100/50 = 2 Units (Bruchteile möglich)
 MIN_POSITION_SIZE = 0.01  # Mindestens 0.01 Units (Micro-Lots)
-MAX_POSITION_SIZE = 10  # Maximum 10 Units (bei 2000 CHF/oz = 20'000 CHF Notional)
+MAX_POSITION_SIZE = 15  # Maximum 10 Units (bei 2000 CHF/oz = 20'000 CHF Notional)
 
 # Stop Loss / Take Profit Defaults (werden von RiskEngine überschrieben)
 DEFAULT_SL_ATR_MULTIPLIER = 2.0
 DEFAULT_TP_ATR_MULTIPLIER = 3.0
-MIN_RISK_REWARD = 1.5
+MIN_RISK_REWARD = 2
 
 # ====================================
 # BACKTESTING
@@ -137,9 +139,7 @@ ATR_SLIPPAGE_MULT = 0.008  # Slippage = ATR * 0.02
 # ====================================
 # LIVE TRADING
 # ====================================
-# Zu deiner eigenen Sicherheit ist Auto-Trading standardmäßig DEAKTIVIERT.
-# Setze AUTO_TRADE = True nur bewusst und zunächst NUR im Demo-Account.
-AUTO_TRADE = False
+AUTO_TRADE = True  # ACTIVATED FOR TESTING - Set to False to disable
 LIVE_TRADING_INTERVAL = 900  # Sekunden (15 Minuten)
 MAX_OPEN_POSITIONS = 1
 
