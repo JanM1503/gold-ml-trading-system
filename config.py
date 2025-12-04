@@ -5,16 +5,11 @@ Alle API-Keys werden aus Environment-Variablen geladen
 import os
 from datetime import datetime
 
-# ====================================
-# API CREDENTIALS (aus ENV laden)
-# HINWEIS: Für GitHub KEINE echten Keys hier hinterlegen!
-#          Setze die Werte ausschließlich über Environment-Variablen
-# ====================================
+
 OANDA_API_KEY = os.getenv("OANDA_API_KEY", "")
 OANDA_ACCOUNT_ID = os.getenv("OANDA_ACCOUNT_ID", "")
 OANDA_API_URL = "https://api-fxpractice.oanda.com/v3"
 
-# Optional: Nur benötigt, wenn zugehörige Features genutzt werden
 NEWS_API_KEY = os.getenv("NEWS_API_KEY", "")
 FRED_API_KEY = os.getenv("FRED_API_KEY", "")
 RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY", "")
@@ -171,4 +166,5 @@ print(f"[TRAIN] Train: {TRAIN_START_DATE} bis {TRAIN_END_DATE}")
 print(f"[TEST] Test: {TEST_START_DATE} bis {TEST_END_DATE}")
 print(f"[GOLD] Gold-Instrument: {GOLD_INSTRUMENT}")
 print(f"[TRADE] Auto-Trading: {'AKTIV' if AUTO_TRADE else 'INAKTIV'}")
+
 
