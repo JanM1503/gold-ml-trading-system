@@ -345,6 +345,10 @@ class TradingModels:
         
         # Confidence
         confidence = entry_proba.max()
+
+        # Wenn Konfidenz zu niedrig ist, bleib FLAT (kein Trade)
+        if confidence < config.MIN_TRADE_PROBA:
+            entry_signal = 0
         
         # Risk Predictions (nur wenn nicht FLAT)
         if entry_signal != 0:
